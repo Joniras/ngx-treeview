@@ -2,7 +2,7 @@
 
 if pwd | grep node_modules ; then
   cd ../..
-  mv node_modules/ngx-treeview tmp-ngx-treeview
+  rm -fr tmp-ngx-treeview && mv node_modules/ngx-treeview tmp-ngx-treeview
   cd tmp-ngx-treeview
   npm install --ignore-scripts
   npm rebuild node-sass
